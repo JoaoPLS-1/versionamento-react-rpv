@@ -20,7 +20,7 @@ export default function Ex01() {
                     </div>
                     <div className="flex items-center justify-center gap-5">
                         <button className="p-4 bg-black rounded-3xl" onClick={() => setHistorico((oldState) =>  [...oldState, contador])}>Salvar Historico</button>
-                        <p className="text-center text-sl">Historico Salvo: {historico}</p>
+                        <p className="text-center text-sl">Historico Salvo: {historico.join(", ")}</p>
                         
                     </div>
                 </div>
