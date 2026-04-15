@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CardExercicios from "@/components/card";
 
 //  Cada item abaixo deverá ser criado numa página separada dentro da pasta "pages"
 const exercises = [
@@ -47,12 +48,15 @@ export default function Home() {
 
   return (
     <>
-      {exercises.map(exercicio => {
+    <div className="flex gap-6 flex-col items-center justify-center mt-6">
 
+      {exercises.map(exercicio => {
         return(
-          <Link href={'exercicio-1'}><p>{exercicio.title}</p></Link>
+          <CardExercicios id={exercicio.id} title={exercicio.title} description={exercicio.description} />
         )
       })}
+    </div>
+      
     </>
   );
 }
